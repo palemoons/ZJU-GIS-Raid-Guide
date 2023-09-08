@@ -1,0 +1,113 @@
+{
+  "raw_folder": "./raw_data",
+  "dataset_folder":"./npy_data",
+  "train_log_folder": "./train_log",
+  "model_folder": "./model",
+  "shuffle": true,
+  "modis": [
+    {
+      "name": "MOD09A1",
+      "bands": [
+        "sur_refl_b01",
+        "sur_refl_b02",
+        "sur_refl_b03",
+        "sur_refl_b04",
+        "sur_refl_b05",
+        "sur_refl_b06",
+        "sur_refl_b07"
+      ],
+      "QC": "QA"
+    },
+    {
+      "name": "MOD15A2H",
+      "bands": [
+        "Lai_500m"
+      ],
+      "QC": "FparLai_QC"
+    },
+    {
+      "name": "MOD16A2",
+      "bands": [
+        "ET"
+      ],
+      "QC": "ET_QC"
+    },
+    {
+      "name": "MOD17A2H",
+      "bands": [
+        "Gpp"
+      ],
+      "QC": "Psn_QC"
+    }
+  ],
+  "sample_IDs": {
+    "obs_train_years": {
+      "start": 2002,
+      "end": 2009,
+      "except": []
+    },
+    "obs_val_years": {
+      "start": 2010,
+      "end": 2011,
+      "except": []
+    },
+    "obs_test_years": {
+      "start": 2012,
+      "end": 2012,
+      "except": []
+    },
+    "date_range": {
+      "start": "04-01",
+      "end": "10-31",
+      "step": "8"
+    }
+  },
+  "data_shape": [
+    384,
+    384
+  ],
+  "hist_list": [
+    [
+      -100,
+      13000
+    ],
+    [
+      -100,
+      12000
+    ],
+    [
+      -100,
+      11000
+    ],
+    [
+      -100,
+      12000
+    ],
+    [
+      -100,
+      10000
+    ],
+    [
+      -100,
+      9000
+    ],
+    [
+      -100,
+      7000
+    ],
+    [
+      0,
+      256
+    ],
+    [
+      0,
+      800
+    ],
+    [
+      0,
+      1400
+    ]
+  ],
+  "hist_bins": 32,
+  "verbose_level": 1
+}
